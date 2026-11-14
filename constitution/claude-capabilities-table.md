@@ -1,17 +1,17 @@
-# Таблица возможностей бесплатной версии Claude (Этаж 1)
+# Claude Free Tier Capabilities Table (Floor 1)
 
-**Участники группы:** [Впишите ваши имена]
+**Group Members:** [Insert your names here]
 
-## 1. Сравнение возможностей бесплатной версии (по документации)
+## 1. Free Tier Capabilities Comparison (Based on Documentation)
 
-| Возможность / Ограничение | Доступно в Free? | Описание | Источник утверждения | Надежность источника |
+| Capability / Limitation | Available in Free? | Description | Source of Claim | Source Reliability |
 | :--- | :--- | :--- | :--- | :--- |
-| Создание проектов (Projects) | Да (до 5 проектов) | Позволяет задать базовые инструкции (`Set project instructions`) и загрузить файлы знаний (`Project knowledge`). | Официальная документация Anthropic: *What are Projects?* (прочитано: 14.11.2026) | Высокая (официальная документация разработчика) |
-| Пользовательские навыки (Skills) | Да | Загрузка ZIP-архивов с файлом `skill.md` и скриптами через `Customize -> Skills`. | Официальная документация Anthropic: *Using Skills in Claude* (прочитано: 14.11.2026) | Высокая (официальная документация разработчика) |
-| Выполнение кода и создание файлов | Да | Запуск кода и расчеты при включении тумблера `Code execution and file creation` в `Settings -> Capabilities`. | Официальная документация Anthropic: *Create and Edit Files with Claude* (прочитано: 14.11.2026) | Высокая (официальная документация разработчика) |
-| Лимит сообщений (Квота) | Ограничено | Динамическая дневная квота сообщений, зависящая от длины контекста и нагрузки на сервер. | Обзор в блоге: *DEV Community — Claude Free Plan vs Pro 2026* (прочитано: 14.11.2026) | Средняя (сторонний технический обзор, точное число сообщений не раскрывается Anthropic) |
-| Глубокое исследование (Deep Research) | Нет | Автономный многошаговый поиск по научным базам недоступен в бесплатном тарифе. | Материалы курса (Слайд 56 Встречи 1) и *DEV Community — Claude Free Plan vs Pro 2026* | Средняя / Внутренний источник курса |
+| Creating Projects (`Projects`) | Yes (up to 5 projects) | Allows setting base system prompts (`Set project instructions`) and uploading reference files (`Project knowledge`). | Official Anthropic Documentation: *What are Projects?* (accessed: 14.11.2026) | High (official developer documentation) |
+| Custom Skills (`Skills`) | Yes | Uploading ZIP archives containing `skill.md` and scripts via `Customize -> Skills`. | Official Anthropic Documentation: *Using Skills in Claude* (accessed: 14.11.2026) | High (official developer documentation) |
+| Code Execution & File Creation | Yes | Running code and calculations when the `Code execution and file creation` toggle is enabled in `Settings -> Capabilities`. | Official Anthropic Documentation: *Create and Edit Files with Claude* (accessed: 14.11.2026) | High (official developer documentation) |
+| Message Quota (Rate Limit) | Limited | Dynamic daily/session message quota depending on context length and server load. | Blog review: *DEV Community — Claude Free Plan vs Pro 2026* (accessed: 14.11.2026) | Medium (third-party technical review; exact message count is not disclosed by Anthropic) |
+| Deep Research Mode | No | Autonomous multi-step search across academic databases is unavailable in the Free tier. | Course Materials (Meeting 1, Slide 56) & *DEV Community — Claude Free Plan vs Pro 2026* | Medium / Internal course source |
 
-## 2. Проверка самоописания Claude (Шаг 2 по Слайду 59)
-- **Запрос к Claude:** «Опиши точно, какие функции доступны в твоей бесплатной версии (Projects, Skills, Code Execution, лимиты сообщений), а какие недоступны».
-- **Результат сравнения с таблицей:** Без загруженной документации Claude часто путает актуальные тарифные планы (например, утверждает, что `Projects` или `Skills` доступны только в платной версии Pro, так как его обучающие данные устарели). Вывод: сам инструмент ненадежен при описании своих технических лимитов и требует проверки по официальной справке Anthropic.
+## 2. Verification of Claude's Self-Description (Step 2 per Slide 59)
+- **Prompt sent to Claude:** "Describe accurately which features are available in your Free tier (`Projects`, `Skills`, `Code Execution`, message limits) and which are unavailable."
+- **Comparison with the table:** Without uploaded documentation, Claude frequently confuses its current pricing tiers (for example, claiming that `Projects` or `Skills` are exclusive to the paid Pro plan because its training data is outdated). Conclusion: the tool itself is unreliable when describing its own technical limits and requires verification against official Anthropic documentation.

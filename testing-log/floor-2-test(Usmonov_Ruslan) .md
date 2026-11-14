@@ -93,4 +93,58 @@ My recollection is that CheckThat! 2024 Task 1 was multigenre and included tweet
 
 Assumptions: I only saw the text of your documents, not the data or code. I assumed the “Twitter collection” in RQ1 is the same collection used in RQ2/RQ3, which the documents do not state.
 
+---
+
+# Part 2: Question-Checker Re-check of Revised RQ1–RQ3 (Round 2)
+
+After revising `RQ1–RQ3` (defining the $N = 1,000$ anonymized Twitter corpus, matching 25% positive-class prevalence in `RQ1`, removing the saturation loophole and causal verb in `RQ2`, and isolating the text preprocessing pipeline in `RQ3`), the skill was re-run.
+
+### Summary Comparison (Round 1 vs. Round 2)
+| Pair | Round 1 (Pass / Partial / Fail) | Round 2 (Pass / Partial / Fail) |
+| :--- | :--- | :--- |
+| **RQ1 / H1.1** | 3 / 5 / 0 | 5 / 3 / 0 |
+| **RQ2 / H1.2** | 1 / 7 / 0 | 4 / 4 / 0 |
+| **RQ3 / H1.3** | 2 / 5 / 1 | 5 / 3 / 0 |
+| **Total** | **6 Pass / 17 Partial / 1 Fail** | **14 Pass / 10 Partial / 0 Fail** |
+
+- **Result:** The revision removed the `RQ3` `Fail` and the main round-one confounds (0 `Fail` across all 24 checks). Remaining `Partial` flags relate to `[UNVERIFIED]` external papers (to be uploaded on Floors 4–5) and statistical test specifications (to be finalized on Floors 6, 8, and 9).
+
+---
+
+# Part 3: External Acceptance Test Case — Vague RQ & Unfalsifiable Hypothesis (Slide 35)
+
+**Test Prompt Submitted:**
+> Research Question: Is AI good for software developers and fact-checkers?  
+> Hypothesis: Using neural networks always improves work quality, except in cases where the neural network was applied or configured improperly.
+
+**Agent Output (`question-checker` report):**
+
+Assumptions: The pair is complete as submitted, with no hidden study design, literature section, or metric definitions. "AI" in the RQ and "neural networks" in the hypothesis are meant to be the same independent variable. I verified nothing against external sources.
+
+### 1. Extracted components
+| Component | Extracted value | Status |
+| :--- | :--- | :--- |
+| **IV** | RQ: "AI". Hypothesis: "using neural networks" | `ERROR: UNDEFINED / VAGUE`. The two terms are not equivalent. There is no specific model, task, tool, or comparison condition. |
+| **DV** | RQ: "good for". Hypothesis: "work quality" | `ERROR: UNDEFINED / VAGUE`. There is no metric, and it is unclear whether "good" means productivity, accuracy, well-being, or something else. |
+| **Population / context** | "Software developers and fact-checkers" | `ERROR: UNDEFINED / VAGUE`. Two different professions are merged, with no sampling frame or task context. |
+
+### 2. Classification
+- **Research question:** Evaluative yes/no question (not a testable form); blurs Causality/Comparative types.
+- **Hypothesis:** Directional (positive), Causal ("improves"), and Universal ("always"). Causal flag raised: none of the three conditions (correlation, temporal precedence, elimination of confounds) is shown to hold.
+
+### 3. Eight-criteria verification
+| Criterion | Status | Justification & notes |
+| :--- | :--- | :--- |
+| 1. Variables and population (measurability) | **Fail** | None of the IV, DV, or population is measurable as stated. |
+| 2. Deductive grounding in theory and literature | **Fail** | No theory or prior work is cited. I have not suggested sources, since I cannot verify any. |
+| 3. Falsifiability (Popper) | **Fail** | The "except … applied or configured improperly" clause is a built-in loophole. "Improper" is not defined independently of the outcome, so any bad result can be reclassified as improper use. That makes the claim circular and unrefutable. |
+| 4. Directionality | **Partial** | The hypothesis points upward ("improves"), but there is no baseline. The RQ has no direction. |
+| 5. Explicit null hypothesis | **Fail** | There is no $H_0$/$H_1$ pair, only a single statement. |
+| 6. Empirical testability | **Fail** | No metric, scale, or measurement procedure is defined for quality or for proper versus improper use. |
+| 7. Declarative form and alignment with RQ | **Partial** | Declarative, but does not align with the RQ in IV, DV, or population. |
+| 8. No vague evaluative terms | **Fail** | "Good," "work quality," "improperly," and "always" are all undefined. |
+
+**Tally:** `0 Pass, 2 Partial, 6 Fail`.  
+**Acceptance-test result:** Matches Test 2 in the requirements document (vague question + unfalsifiable hypothesis). Identified both flaws against the criteria table and did not rewrite the hypothesis (**PASSED**).
+
 I ran all three at once because you asked for that. Tell me when you’ve reviewed this, and say which RQ you’d like re-checked after you revise it. I’ll wait for your confirmation before doing anything else.

@@ -1,47 +1,47 @@
-# Исследовательские вопросы, гипотезы и критерии проверки (Этаж 2)
+# Research Questions, Hypotheses, and Verification Criteria (Floor 2)
 
-**Тема исследования:** Эмпирическая оценка переносимости (Domain Generalization) и адаптации программных моделей обнаружения проверяемых утверждений (Check-Worthiness Detection) при переходе от формальных корпусов к данным социальных сетей.
-
----
-
-## Часть 1. Критерии хорошей гипотезы (по Слайду 22 и 32 Встречи 2)
-1. **Связь между переменными и популяция:** Четко определены и измеримы независимая переменная (IV), зависимая переменная (DV) и целевой корпус данных.
-2. **Дедуктивная опора на теорию:** Гипотеза выведена дедуктивным путем из существующей теории и предыдущих эмпирических исследований (2024 г.), а не придумана произвольно.
-3. **Фальсифицируемость (по Карлу Попперу):** Существует конкретный эмпирический исход, который может опровергнуть гипотезу; отсутствуют кольцевая логика и «лазейки».
-4. **Направленность:** Исследовательская гипотеза ($H_1$) четко задает направление ожидаемого изменения или разницы (снижается / монотонно растет / выше).
-5. **Наличие нулевой гипотезы ($H_0$):** Для каждой исследовательской гипотезы сформулирована нулевая гипотеза об отсутствии связи или разницы.
-6. **Эмпирическая проверяемость:** Переменные операционализированы через стандартные количественные метрики (`F1-score`, `Precision`, `Recall`).
-7. **Форма утверждения:** Гипотеза сформулирована как утвердительное предложение (не вопрос) и является прямым предполагаемым ответом на исследовательский вопрос.
-8. **Лаконичность и однозначность:** Отсутствуют размытые оценочные слова («лучше», «хорошо», «правильно») без указания конкретной метрики измерения.
+**Research Topic:** Empirical Evaluation of Domain Generalization and Adaptation of Software Models for Check-Worthiness Detection When Transitioning from Formal Corpora to Social Media Data.
 
 ---
 
-## Часть 2. Три исследовательских вопроса и гипотезы к ним
-
-### Исследовательский вопрос 1 (RQ1 — Перенос модели между доменами без адаптации)
-- **Вопрос:** Как изменяется качество бинарной классификации утверждений, заслуживающих проверки фактов (измеряемое метрикой F1-score для положительного класса), при переносе предобученной трансформерной модели BERT с формального корпуса политических дебатов (`CheckThat! 2024 Task 1`) на неформальный корпус сообщений социальной сети Twitter без дополнительного дообучения (Zero-shot Cross-Dataset Transfer)?
-- **Независимая переменная (IV):** Домен (жанр) тестового корпуса данных (формальные реплики дебатов `CheckThat! 2024` vs. неформальные пользовательские публикации `Twitter`).
-- **Зависимая переменная (DV):** Качество выявления проверяемых утверждений (метрика `F1-score` положительного класса, а также `Precision` и `Recall`).
-- **Теоретическое обоснование:** Согласно теории смещения распределения данных (Dataset Shift) и эмпирическим результатам Nenno (2024), модели Check-Worthiness теряют обобщающую способность при смене жанра, лексики и доли положительного класса.
-- **Нулевая гипотеза ($H_{0.1}$):** Значение метрики F1-score положительного класса для модели BERT, обученной на `CheckThat! 2024`, на тестовой коллекции `Twitter` без дообучения не отличается от значения F1-score (или превышает его) на официальном тестовом наборе `CheckThat! 2024`.
-- **Исследовательская гипотеза ($H_{1.1}$ — направленная):** При переносе модели BERT, обученной на корпусе `CheckThat! 2024`, на тестовую коллекцию `Twitter` без адаптации значение метрики F1-score для положительного класса статистически значимо снижается по сравнению с официальным тестом `CheckThat! 2024`.
-
----
-
-### Исследовательский вопрос 2 (RQ2 — Влияние объема размеченных данных при адаптации)
-- **Вопрос:** Как увеличение объема целевой обучающей выборки сообщений Twitter (50, 100, 250 и 500 вручную размеченных примеров) при дообучении (Fine-Tuning) базовой модели BERT влияет на качество обнаружения утверждений, заслуживающих проверки (F1-score положительного класса), на независимом тестовом наборе Twitter?
-- **Независимая переменная (IV):** Количество размеченных сообщений Twitter, используемых для дообучения модели (0, 50, 100, 250, 500 твитов).
-- **Зависимая переменная (DV):** Значение метрики `F1-score` положительного класса на фиксированной отложенной тестовой выборке Twitter.
-- **Теоретическое обоснование:** Согласно теории доменной адаптации (Domain Adaptation) и работам Nenno (2024) и Meng et al. (2024), дообучение трансформера на примерах целевого домена снижает смещение распределения (Dataset Shift), обеспечивая монотонный прирост качества с постепенным насыщением кривой обучения.
-- **Нулевая гипотеза ($H_{0.2}$):** Увеличение объема целевой выборки дообучения от 50 до 500 размеченных твитов не приводит к росту метрики F1-score положительного класса на независимом тестовом наборе Twitter.
-- **Исследовательская гипотеза ($H_{1.2}$ — направленная):** Увеличение объема целевой выборки дообучения (50, 100, 250, 500 размеченных твитов) приводит к монотонному росту метрики F1-score положительного класса на тестовом наборе Twitter с уменьшающимся предельным приростом (эффект насыщения кривой обучения).
+## Part 1. Criteria for a Good Hypothesis (Based on Slides 22 and 32 of Meeting 2)
+1. **Relationship Between Variables and Population:** The Independent Variable (IV), Dependent Variable (DV), and target data corpus are clearly defined and measurable.
+2. **Deductive Grounding in Theory:** The hypothesis is deductively derived from existing theory and prior empirical studies (2024), rather than invented arbitrarily.
+3. **Falsifiability (per Karl Popper):** A specific empirical outcome exists that could refute the hypothesis; circular logic and built-in "loopholes" are absent.
+4. **Directionality:** The research hypothesis ($H_1$) clearly specifies the direction of the expected change or difference (decreases / monotonically increases / higher).
+5. **Presence of a Null Hypothesis ($H_0$):** Every research hypothesis is paired with an explicit null hypothesis stating the absence of a relationship or difference.
+6. **Empirical Testability:** Variables are operationalized through standard quantitative metrics (`F1-score`, `Precision`, `Recall`).
+7. **Declarative Form:** The hypothesis is formulated as an affirmative statement (not a question) and serves as a direct tentative answer to the research question.
+8. **Conciseness and Unambiguity:** Vague evaluative words ("better", "good", "proper") without a specified measurement metric are absent.
 
 ---
 
-### Исследовательский вопрос 3 (RQ3 — Сравнение адаптированной модели и внешней модели на «живом» языке)
-- **Вопрос:** Как различается качество выявления твитов, заслуживающих фактчекинга (F1-score положительного класса), между моделью BERT, дообученной на нашей коллекции необработанных («живых») твитов в RQ2, и готовой внешней моделью (`ba-claim/bert`) со стандартным пайплайном очистки текста (замена `@user` и чисел на токены, удаление ссылок) на одной и той же отложенной выборке Twitter?
-- **Независимая переменная (IV):** Тип программной конфигурации модели (адаптированная под неформальный синтаксис модель из RQ2 vs. внешняя модель `ba-claim/bert` с агрессивной нормализацией текста без дообучения).
-- **Зависимая переменная (DV):** Значение метрики `F1-score` положительного класса на единой отложенной тестовой выборке Twitter.
-- **Теоретическое обоснование:** Согласно обзору соревнования CheckThat! 2024 (Hasanain et al., 2024) и анализу Nenno (2024), шаблонная маскировка токенов удаляет важные контекстные сигналы неформальной речи, тогда как дообучение на естественном синтаксисе соцсети сохраняет информативные признаки.
-- **Нулевая гипотеза ($H_{0.3}$):** Между адаптированной моделью BERT (из RQ2) и внешней моделью `ba-claim/bert` нет разницы в значении F1-score (либо внешняя модель показывает более высокий F1-score) на отложенной выборке неформальных публикаций Twitter.
-- **Исследовательская гипотеза ($H_{1.3}$ — направленная):** Модель BERT, прошедшая дообучение на целевой коллекции Twitter (RQ2), достигает более высокого значения метрики F1-score положительного класса на «живом» языке Twitter по сравнению с готовой внешней моделью `ba-claim/bert` без дообучения.
+## Part 2. Three Research Questions and Their Hypotheses
+
+### Research Question 1 (RQ1 — Cross-Dataset Model Transfer Without Adaptation)
+- **Question:** How does the binary classification performance of check-worthy claims (measured by positive-class `F1-score`) change when a pre-trained BERT transformer model is transferred from a formal political debate corpus (`CheckThat! 2024 Task 1`) to an informal social media corpus (`Twitter`) without additional fine-tuning (Zero-shot Cross-Dataset Transfer)?
+- **Independent Variable (IV):** Domain (genre) of the evaluation dataset (formal debate utterances in `CheckThat! 2024` vs. informal user posts on `Twitter`).
+- **Dependent Variable (DV):** Check-worthy claim detection performance (positive-class `F1-score`, as well as `Precision` and `Recall`).
+- **Theoretical Rationale:** According to Dataset Shift theory and empirical findings by Nenno (2024), Check-Worthiness models lose generalization ability when the genre, lexicon, and positive-class proportion change.
+- **Null Hypothesis ($H_{0.1}$):** The positive-class `F1-score` of the BERT model trained on `CheckThat! 2024`, when evaluated on the `Twitter` test collection without fine-tuning, does not differ from (or exceeds) its `F1-score` on the official `CheckThat! 2024` test set.
+- **Research Hypothesis ($H_{1.1}$ — Directional):** When transferring a BERT model trained on the `CheckThat! 2024` corpus to the `Twitter` test collection without adaptation, the positive-class `F1-score` decreases statistically significantly compared to the official `CheckThat! 2024` test set.
+
+---
+
+### Research Question 2 (RQ2 — Impact of Labeled Data Volume During Adaptation)
+- **Question:** How does increasing the volume of the target `Twitter` training sample (50, 100, 250, and 500 manually labeled examples) during fine-tuning of the base BERT model affect check-worthy claim detection performance (positive-class `F1-score`) on an independent `Twitter` test set?
+- **Independent Variable (IV):** Number of labeled `Twitter` messages used for fine-tuning the model (0, 50, 100, 250, 500 tweets).
+- **Dependent Variable (DV):** Positive-class `F1-score` on a fixed held-out `Twitter` test sample.
+- **Theoretical Rationale:** According to Domain Adaptation theory and studies by Nenno (2024) and Meng et al. (2024), fine-tuning a transformer on target-domain examples reduces Dataset Shift, providing a monotonic increase in performance with gradual saturation of the learning curve.
+- **Null Hypothesis ($H_{0.2}$):** Increasing the target fine-tuning sample volume from 50 to 500 labeled tweets does not lead to an increase in the positive-class `F1-score` on the independent `Twitter` test set.
+- **Research Hypothesis ($H_{1.2}$ — Directional):** Increasing the target fine-tuning sample volume (50, 100, 250, 500 labeled tweets) leads to a monotonic increase in the positive-class `F1-score` on the `Twitter` test set with diminishing marginal gains (learning curve saturation effect).
+
+---
+
+### Research Question 3 (RQ3 — Comparison of the Adapted Model and an External Model on "Live" Language)
+- **Question:** How does the detection performance of check-worthy tweets (positive-class `F1-score`) differ between the BERT model fine-tuned on our collection of raw ("live") tweets in RQ2 and an off-the-shelf external model (`ba-claim/bert`) with a standard text cleaning pipeline (replacing `@user` and numbers with tokens, removing links) on the exact same held-out `Twitter` sample?
+- **Independent Variable (IV):** Software configuration type of the model (the model adapted to informal syntax from RQ2 vs. the external `ba-claim/bert` model with aggressive text normalization and no fine-tuning).
+- **Dependent Variable (DV):** Positive-class `F1-score` on a single held-out `Twitter` test sample.
+- **Theoretical Rationale:** According to the CheckThat! 2024 competition overview (Hasanain et al., 2024) and the analysis by Nenno (2024), template token masking removes important contextual signals of informal speech, whereas fine-tuning on natural social media syntax preserves informative features.
+- **Null Hypothesis ($H_{0.3}$):** There is no difference in `F1-score` between the adapted BERT model (from RQ2) and the external `ba-claim/bert` model (or the external model achieves a higher `F1-score`) on the held-out sample of informal `Twitter` posts.
+- **Research Hypothesis ($H_{1.3}$ — Directional):** The BERT model fine-tuned on the target `Twitter` collection (RQ2) achieves a higher positive-class `F1-score` on "live" `Twitter` language compared to the off-the-shelf external `ba-claim/bert` model without fine-tuning.

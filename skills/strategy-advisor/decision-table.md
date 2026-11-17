@@ -1,10 +1,10 @@
-# Floor 3 — Research Strategy Decision Table
+ Floor 3 — Research Strategy Decision Table
 
-**Status:** APPROVED BY THE GROUP — strategy selection approved; feasibility checks remain open.
-**Source:** Meeting 3, slides 24–35, 52–54, 58–59.
-**Research context:** Check-Worthiness Detection; see `research-plan/rq-and-hypotheses.md`.
+Status: APPROVED BY THE GROUP — strategy selection approved; feasibility checks remain open.
+Source: Meeting 3, slides 24–35, 52–54, 58–59.
+Research context: Check-Worthiness Detection; see `research-plan/rq-and-hypotheses.md`.
 
-## Decision criteria
+Decision criteria
 - Classify the question first: exploratory, frequency/process, relationship, causality, or design (design is not a knowledge question).
 - Compare intervention (how much researchers manipulate the setting) and generalization (how far findings extend beyond the case).
 - Weigh three competing aims: A = generalization across actors; B = precision/control of behavior; C = realism of context.
@@ -12,7 +12,7 @@
 - Evaluate feasibility: dataset access, time, ethics/privacy, annotation capacity, computing resources.
 - Choose strategy before method, then data collection.
 
-## Eight-strategy reference table
+Eight-strategy reference table
 | Strategy | Environment | Suitable question types / situations | Gains | Inherent cost | Feasibility for our project |
 |---|---|---|---|---|---|
 | Field Study | Natural | Exploratory or process questions about actual fact-checking workflows without intervention | C: realism | Limited statistical generalization and measurement precision | Low unless access to fact-checking teams |
@@ -24,7 +24,7 @@
 | Formal Theory | Non-empirical | Conceptual explanation or formal propositions built from prior research | Broad conceptual scope | No new empirical observations | Medium for conceptual work; not sufficient alone to test F1 hypotheses |
 | Computer Simulation | Non-empirical | Scenario exploration using a computational model of posting or fact-checking behavior | Many scenarios at low marginal cost | Findings depend on model assumptions; no new observed behavior | Medium if a valid simulation model is defined |
 
-## Group-approved strategies for our three research questions
+ Group-approved strategies for our three research questions
 
 | RQ | Research question type | Proposed primary strategy | Why this fits | Inherent limitation | Alternative to consider | Group decision |
 |---|---|---|---|---|---|---|
@@ -32,15 +32,14 @@
 | RQ2: Target-domain fine-tuning set size vs F1 | Relationship (knowledge; associational wording in current RQ) | Laboratory Experiment | Vary labeled training sample size across 50/100/250/500 while holding model/test set and other conditions constant | Results specific to selected architecture, tweet pool, and training setup | Sample Study for observational association across existing model runs | Approved: Laboratory Experiment |
 | RQ3: Text normalization vs unmasked syntax | Comparative (knowledge) | Laboratory Experiment | Change preprocessing pipeline while keeping model architecture, training split, evaluation set and hyperparameters fixed | May not generalize to other corpora, languages or architectures | Experimental Simulation only if a staged human workflow is studied instead | Approved: Laboratory Experiment |
 
-## Feasibility constraints to verify before implementation
+Feasibility constraints to verify before implementation
 - Confirm that 1,000 English tweets can legally and ethically be collected, anonymized and annotated by two coders.
 - Confirm access and licensing for CheckThat! 2024 Task 1 data and annotation guidelines.
 - Confirm compute/time budget for BERT fine-tuning, 5 seeds, and bootstrap analyses.
 - Confirm how the 25% class-prevalence matching in RQ1 will be implemented without data leakage.
 - Confirm group members accept the limited generalizability of controlled laboratory evaluation.
 
-## Group's independent decision and rationale
-**Decision status:** The group has approved Laboratory Experiment as the primary strategy for RQ1, RQ2 and RQ3. The justifications and trade-offs are recorded above. Feasibility constraints listed above still require verification.
+Group's independent decision and rationale
+Decision status: The group has approved Laboratory Experiment as the primary strategy for RQ1, RQ2 and RQ3. The justifications and trade-offs are recorded above. Feasibility constraints listed above still require verification.
 
-**Approved by:** Research group (individual names not recorded).  
-**Approval date:** Not recorded.
+

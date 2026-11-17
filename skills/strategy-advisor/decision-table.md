@@ -1,7 +1,7 @@
  Floor 3 — Research Strategy Decision Table
 
 Status: APPROVED BY THE GROUP — strategy selection approved; feasibility checks remain open.
-Source: Meeting 3, slides 24–35, 52–54, 58–59.
+Source: Meeting 3.
 Research context: Check-Worthiness Detection; see `research-plan/rq-and-hypotheses.md`.
 
 Decision criteria

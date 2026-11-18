@@ -47,9 +47,36 @@ I used the 8 criteria exactly as the skill defines them. I only diagnose; I do n
 | 7. Form & alignment | Partial | The form is declarative, but the levels (0 vs. 50–500) differ between IV, H0 and H1. |
 | 8. Vague terms | Partial | "Monotonic", "saturation" and "marginal gain" are undefined quantitatively. |
 
-- **Causality flag:** H1.2 uses "leads to". Until the protocol states controls for nested/independent subsets, class balance, and validation splits, the causal wording is unsupported.
+- Causality flag: H1.2 uses "leads to". Until the protocol states controls for nested/independent subsets, class balance, and validation splits, the causal wording is unsupported.
 
-### RQ3 / H1.3: adapted model vs. ba-claim/bert
-- **IV:** "model configuration". `ERROR: UNDEFINED / VAGUE`, because it bundles at least four things: fine-tuning on target data, preprocessing (raw vs. normalized), training data, checkpoint and hyperparameters.
-- **DV:** positive-class F1 on the same held-out Twitter set.
-- **ERROR: UNDEFINED / VAGUE:** which RQ2 checkpoint (50, 1
+ RQ3 / H1.3: adapted model vs. ba-claim/bert
+- IV: "model configuration". `ERROR: UNDEFINED / VAGUE`, because it bundles at least four things: fine-tuning on target data, preprocessing (raw vs. normalized), training data, checkpoint and hyperparameters.
+- DV: positive-class F1 on the same held-out Twitter set.
+- ERROR: UNDEFINED / VAGUE:** which RQ2 checkpoint (50, 1
+- ## Additional Test — RQ1 Without Hypotheses (18 November 2026)
+
+Skill:question-checker (Floor 2)
+
+Test input:  
+RQ1: How well does a check-worthiness detection model trained on a public benchmark generalize to manually labeled Twitter posts from different topics?
+
+Test conditions:  
+Only the research question was submitted. No H0 or H1 hypotheses were provided.
+
+Observed result:
+- Claude evaluated the research question using the eight criteria.
+- It correctly identified missing details about the dataset, evaluation metrics, and model.
+- It did not rewrite the research question.
+- It stopped and waited for researcher confirmation.
+- However, criteria related to missing hypotheses were marked as "Fail (N/A)".
+
+Issue identified:  
+When hypotheses are not provided, hypothesis-specific criteria should be marked as "N/A" rather than counted as failures of the research question.
+
+Test status: PARTIAL PASS
+
+Recommended improvement:  
+Distinguish between "Fail" and "Not Applicable" when evaluating research questions without hypotheses.
+
+Action: 
+Record this issue for future improvement of the question-checker skill.

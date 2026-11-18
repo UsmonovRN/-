@@ -53,7 +53,7 @@ I used the 8 criteria exactly as the skill defines them. I only diagnose; I do n
 - IV: "model configuration". `ERROR: UNDEFINED / VAGUE`, because it bundles at least four things: fine-tuning on target data, preprocessing (raw vs. normalized), training data, checkpoint and hyperparameters.
 - DV: positive-class F1 on the same held-out Twitter set.
 - ERROR: UNDEFINED / VAGUE:** which RQ2 checkpoint (50, 1
-- **Additional Test — RQ1 Without Hypotheses (18 November 2026)**
+ **Additional Test — RQ1 Without Hypotheses (18 November 2026)**
 
 Skill:question-checker (Floor 2)
 

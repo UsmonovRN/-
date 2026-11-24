@@ -1,4 +1,4 @@
-1 этаж: -  👍!ГОТОВО!👍
+<img width="650" height="442" alt="image" src="https://github.com/user-attachments/assets/b97bfbcd-a883-40be-aafe-be51cb26fe26" />1 этаж: -  👍!ГОТОВО!👍
        1.1. Tool capabilities table  - что бесплатная версия Claude умеет делать, какие у нее ограничения/недостатки, источник каждого утверждения и оценка его надежности: официальная справка или сторонний блог
        1.2. !!!Затем нужно спросить сам Claude о его бесплатных возможностях и сравнить его ответ с вашей таблицей.!!!
        1.3. Эта таблица сохраняется как отдельный документ в папке constitution на GitHub (и загружается в раздел Project knowledge в Claude), а на ее основе пишется одностраничный «Документ требований» и сама «Конституция»
@@ -18,3 +18,7 @@
       2.4. Таблица проверки презентации Встречи 2 на достоверность (упражнение со Слайда 29 Встречи 2).
 Для перепроверки: 
                      Слайд 38 Встреча 2
+##Floor 3: - complete##
+       3.1 A file summarizing the choice of strategy has been added to the `research-plan` folder.
+       3.2 A `strategy-advisor` folder has been created within the `skills` directory, containing `decision-table.md` (a table with a full description of all strategies, including the ones we selected) and `skill.md` (the skills I uploaded to the project, which were then used by Claude).
+       3.3 The results have been compiled in the `floor 3` files located in the `testing-log` folder.

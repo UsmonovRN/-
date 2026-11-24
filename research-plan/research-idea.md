@@ -1,6 +1,6 @@
 **Research Topic**: Empirical Evaluation of Domain Generalization and Adaptation of Software Models for Check-Worthiness Detection When Transitioning from Formal Corpora to Social Media Data.
 
-## Problem Statement
+ Problem Statement
 
 Automatic detection of claims that deserve fact-checking (Check-Worthiness Detection) is an important step in automated fact-checking.
 
@@ -34,7 +34,7 @@ Research Hypothesis (H₁.₃): Holding the model checkpoint (bert-base-uncased)
 
 The strategy selection was approved by the research team and conditionally supported by the strategy-advisor agent.
 
-## Strategy Justification
+Strategy Justification
 
 RQ1 — Zero-Shot Cross-Corpus Transfer
 
@@ -48,7 +48,7 @@ RQ3 — Impact of Text Normalization Pipeline vs. Raw Syntax
 
 Laboratory Experiment enables a controlled comparison of two text preprocessing pipelines while keeping the model architecture, training data, evaluation set, and hyperparameters constant.
 
-## Trade-offs and Limitations
+Trade-offs and Limitations
 
 A/B/C Trade-offs
 

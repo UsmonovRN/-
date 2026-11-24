@@ -18,7 +18,7 @@
       2.4. Таблица проверки презентации Встречи 2 на достоверность (упражнение со Слайда 29 Встречи 2).
 Для перепроверки: 
                      Слайд 38 Встреча 2
-##Floor 3: - complete##
+**Floor 3: - complete
        3.1 A file summarizing the choice of strategy has been added to the `research-plan` folder.
        3.2 A `strategy-advisor` folder has been created within the `skills` directory, containing `decision-table.md` (a table with a full description of all strategies, including the ones we selected) and `skill.md` (the skills I uploaded to the project, which were then used by Claude).
        3.3 The results have been compiled in the `floor 3` files located in the `testing-log` folder.

@@ -23,15 +23,18 @@
        3.1 A file summarizing the choice of strategy has been added to the `research-plan` folder.
        3.2 A `strategy-advisor` folder has been created within the `skills` directory, containing `decision-table.md` (a table with a full description of all strategies, including the ones we selected) and `skill.md` (the skills I uploaded to the project, which were then used by Claude).
        3.3 The results have been compiled in the `floor 3` files located in the `testing-log` folder.
-** Floor 4 — In Progress
+**Floor 4 — In Progress
 
 Completed:
-- Review protocol and review-manager skill prepared.
-- Initial ACL Anthology pilot performed.
-- Slide 48 reference-verification exercise recorded.
-- Slide 50 claim-verification exercise completed.
+- Created the review-manager skill and literature review protocol.
+- Ran a preliminary Q1 pilot in ACL Anthology with five candidate papers.
+- Recorded the slide 48 reference-verification exercise in testing-log/floor-4-test.md.
+- Completed the slide 50 claim checks and recorded the results in testing-log/floor-4-slide-claims.md.
 
 Pending:
 - Complete full-text screening and evidence extraction for the pilot papers.
 - Have a second group member review the screening decisions.
 - Clarify the acceptance-test materials with the instructor.
+
+The pilot is not a completed systematic literature review.
+No official acceptance-test pass is claimed.
